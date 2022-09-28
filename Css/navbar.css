@@ -1,0 +1,128 @@
+.header {
+    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--theme-color);
+}
+.logo img {
+    border-radius: 15%;
+}
+
+/*Menu*/
+.menunavbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.menunavbar li {
+    padding: 0 15px;
+}
+
+.menunavbar a {
+    color: var(--theme-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.open-menu, 
+.close-menu {
+    display: none;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 950px) {
+    
+    /*Menu*/
+    .menunavbar {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%; /* Ancho Azul */
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);;
+        height: 100%; /* Alto de todo lo Azul */
+        overflow-y: auto;
+        
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    
+    .menunavbar li {
+        padding: 0;
+    }
+
+    .menunavbar a {
+        color: var(--text-color-inverse);
+        line-height: 60px;
+        /* text-transform: uppercase; poner Todo Mayuscula */
+        /* padding: 10px 10px;
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 1); */
+    }
+
+    .open-menu, 
+    .close-menu {
+        display: block;
+        border: none;
+        background: none ; /* eliminar estilos del boton */
+        cursor: pointer;
+        background-color: var(--navbar-shallow-color); /* Color menu hamburguesa */
+        /* filter: invert(100%);  *//* invertir colores Menu Hamburguer */
+        
+    }
+
+    .close-menu {
+        align-self: flex-end;
+        padding: 10px 10px;
+
+    }
+    .menu_opened {
+        opacity: 1;
+        pointer-events: all;
+        
+    }
+}
+
+/* Nota: Voy en el min: 36:47 */
+
+
+
+
+
+
+
+
+/* .crearcuenta {
+
+    background-color: rgb(255, 85, 0);
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 4px;
+}
+.inicias {
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 4px;
+} */

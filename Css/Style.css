@@ -1,0 +1,153 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+html {
+    height: 100%; 
+}
+
+:root{
+    --theme-color: white;
+    --primary-color: #124f88;
+    --secundary-color: #F7C331;
+    --text-color-inverse: white;
+    --text-color: black;
+    --navbar-shallow-color: #e5e5e5;
+    --menu-mobile-background-color: #3A4460;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+.grid-container  * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    padding: 0px;
+    /* text-align: center; */
+    
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+    background-color: tomato;
+    /* background-color: rgba(0, 0, 0, 1); */
+    /* background-color: aliceblue; */
+    
+}
+
+.navbar {
+    grid-area: navbar;
+    /* background-color: springgreen; */
+    background-color: yellowgreen;
+    /* background-color: black; */
+    /* padding: 5px; Alto header - navbar */
+}
+
+.navbar2 {
+    grid-area: navbar2;
+    background-color: var(--secundary-color);
+}
+
+.main {
+    grid-area: main;
+    background-color: #3A4460;
+}
+
+.main {
+    grid-area: main;
+    background-color: pink;
+    background-color: yellow;
+    /* background-color: aliceblue; */
+}
+
+.footer {
+    grid-area: footer;
+    /* background-color: yellowgreen; */
+    background-color: orange;
+    /* background-color: aliceblue; */
+    
+}
+
+.grid-container{
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template: 
+        "header"   450px
+        "navbar2"  500px
+        "main"     500px
+        "footer"   100px
+        ;   
+}
+
+/* Diseño Tablet */
+@media (min-width: 600px){
+    .grid-container{
+        /* background-color: rgb(241, 233, 233); */
+        /* grid-template-columns: auto;  *//* Ancho columnas */
+        /* grid-template-rows: auto auto auto 100px; */ /* Alto Filas */
+        /* grid-template-areas: 
+        "header  header"
+        "main    main"      
+        "main    main"
+        "footer  footer"
+        ; */
+
+        grid-template:
+        "header  header"  500px
+        "navbar2 navbar2" 500px
+        "main    main"    500px
+        "footer  footer"  100px /
+        auto
+        ;
+    }
+}
+
+.barra-busqueda {
+    grid-area: busqueda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-busqueda input{
+    min-width: 60%;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid var(--navbar-shallow-color);
+    font-size: 16px;
+    /* font-family: 'Open Sans', sans-serif; */
+    background-color: var(--navbar-shallow-color);
+    
+}
+
+.barra-busqueda button{
+    height: 35px;
+    border: 1px solid var(--navbar-shallow-color);
+    border-left: none;
+    color: #545454;
+    background: #f8f8f8;
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: ;
+    
+}
+
