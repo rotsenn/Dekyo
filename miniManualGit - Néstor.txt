@@ -1,0 +1,43 @@
+Mini - Manual de Git
+
+1. Decargar Git -->
+	git para Windows --> https://git-scm.com/download/win
+	git para MacOS   --> https://git-scm.com/download/mac
+	git para Linux   --> https://git-scm.com/book/es/v2#Instalando-en-Linux
+
+
+2. Verificar la vesion de git
+	git --version
+
+
+3. Crear un repositorio de git
+	git init
+
+4. Crear una copia local del repositorio
+	git clone /path/to/repository
+
+   Si utilizas un servidor remoto, ejecuta
+	git clone username@host:/path/to/repository
+
+   Crear una copia del repositorio atraves de github o url
+	git clone pegar enlace url 
+	Ejemplo:
+	git clone https://github.com/
+	
+
+5. Registrar cambios con add & commit
+	git add <filename>
+	git add .
+
+6. Confirmar cambios 
+	git commit -m "Commit message"
+
+7. Establecer direccion de correo Electronico(Crear una Cuenta)
+	git config --global user.email "rotsenav@gmail.com"
+
+8. Establecer Usuario
+	git config user.name "rotsenn"
+
+
+9. Enviar Cambios
+	git push
